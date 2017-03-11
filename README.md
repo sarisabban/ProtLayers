@@ -21,7 +21,7 @@ To use follow these steps:
 2. Install DSSP in linux by running the following command in terminal (sudo apt-get install dssp).
 3. Install numpy (python3 -m pip install numpy).
 4. All files must be in the same directory as this script.
-5. Run by navigating to working directory then typing this in the command line to loop through all .pdb files:
+5. Run by navigating to working directory then typing this in the command line:
 `./ProtLayers.py FINENAME.pdb`
 6. Select all output all together and paste as is in the pymol terminal.
 

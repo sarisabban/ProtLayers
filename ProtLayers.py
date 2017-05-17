@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import re , itertools , numpy , sys , Bio.PDB 
+import re , itertools , numpy , sys , Bio.PDB , os
 
 def ProtLayers(Filename):
 	'''Takes A .pdb protein structure file and returns a PyMol code that highlights the different layers (Surface, Boundery, Core) of a protein'''
@@ -84,19 +84,26 @@ def ProtLayers(Filename):
 	Bound = '+'.join(str(z) for z in boundery)
 	Core = '+'.join(str(z) for z in core)
 
-
-
 	return(Surf , Bound , Core)
 #-------------------------------------------------------------------------------------------------------------------
 filename=sys.argv[1]							#file input from command line
 code = ProtLayers(filename)
 
-#Print the custom PYMOL commands to select the different protein layers according to each amino acid's SASA.
-print('select Surf , resi' , code[0])
-print('select Bound , resi' , code[1])
-print('select Core , resi' , code[2])
-print('color red , Core')
-print('color magenta , Bound')
-print('color green , Surf')
-print('hide all')
-print('show cartoon')
+Temp = open('temp.py' , 'w')
+
+Temp.write('import pymol\npymol.finish_launching()\n')
+Temp.write("cmd.load('%s')\n" % sys.argv[1])
+
+Temp.write("cmd.select('Surf', 'resi %s')\n" % code[0])
+Temp.write("cmd.select('Bound', 'resi %s')\n" % code[1])
+Temp.write("cmd.select('Core', 'resi %s')\n" % code[2])
+
+Temp.write("cmd.color('green' , 'Surf')\n")
+Temp.write("cmd.color('magenta' , 'Bound')\n")
+Temp.write("cmd.color('red' , 'Core')\n")
+Temp.write("cmd.show_as('cartoon' , 's')\n")
+
+Temp.close()
+
+os.system("pymol temp.py")
+#os.remove('temp.py')

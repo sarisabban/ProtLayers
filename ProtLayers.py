@@ -106,4 +106,4 @@ Temp.write("cmd.show_as('cartoon' , 's')\n")
 Temp.close()
 
 os.system("pymol temp.py")
-#os.remove('temp.py')
+os.remove('temp.py')

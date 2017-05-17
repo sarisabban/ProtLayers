@@ -6,7 +6,13 @@ This script calculates the different layers (Surface, Boundery, Core) of a prote
 ## DESCRIPTION:
 This script does the following:
 
-1. Prints out PYMOL commands to select spesific amino acids in a protein depending on their layer calculated by their SASA (solvent-accessible surface area). These commands allow the user to colour different parts (default: Core=Red, Boundery=Magenta, Surface=Green) of a protein and better visualise it in order to take better decisions on refining it.
+1. Calculates the different layers (Surface, Boundery, Core) of a protein by calculating each amino acid's SASA (solvent-accessible surface area).
+2. It then uses this information to write up Pymol commands that colour these different layers in Pymol.
+3. It then puts these commands into a temporary (temp) file which is used to open Pymol and execute these commands, this strange setup is done because this script runs in python 3 and the educational Pymol runs python 2 and will not execute all biology related python 2 modules.
+4. Pymol will open showing the protein in cartoon structure and each layer highlighted in a different colour.
+5. Once Pymol is exited the temp file is deleted.
+
+These commands allow the user to colour different parts (default: Core=Red, Boundery=Magenta, Surface=Green) of a protein and better visualise it in order to take better decisions on refining it.
 
 This script was written to run on GNU/Linux using python 3, it was not tested in Windows or MacOS.
 This script will mostly be useful to refine proteins after a Rosetta FFL (Fold From Loop) computation, but can still be used to refine any protein.

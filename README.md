@@ -1,5 +1,5 @@
 # ProtLayers
-This script points out a PyMol code that highlights the different layers (Surface, Boundery, Core) of a protein.
+This script calculates the different layers (Surface, Boundery, Core) of a protein then opens Pymol to highlight them.
 
 
 
@@ -17,13 +17,13 @@ Contact the author at sari.sabban@gmail.com for any questions regarding this scr
 ## HOW TO USE:
 To use follow these steps:
 
-1. Install biopython by running the following command in terminal (python3 -m pip install biopython) you need pip to be installed, if you do not have it you can install it in linux by running the following command in terminal (sudo apt-get install python3-pip).
-2. Install DSSP in linux by running the following command in terminal (sudo apt-get install dssp).
-3. Install numpy (python3 -m pip install numpy).
-4. All files must be in the same directory as this script.
-5. Run by navigating to working directory then typing this in the command line:
-`./ProtLayers.py FINENAME.pdb`
-6. Select all output all together and paste as is in the pymol terminal.
+1. Install DSSP in linux by running the following command in terminal (sudo apt-get install dssp).
+2. Install Pymol by running the following command in terminal (sudo apt-get install dssp).
+3. Install biopython by running the following command in terminal (python3 -m pip install biopython) you need pip to be installed, if you do not have it you can install it in linux by running the following command in terminal (sudo apt-get install python3-pip).
+4. Install numpy (python3 -m pip install numpy).
+5. The .pdb file must be in the same directory as this script.
+6. Run by navigating to working directory then typing this in the command line:
+`python3 ProtLayers.py FINENAME.pdb`
 
 
 

@@ -101,7 +101,7 @@ Temp.write("cmd.select('Core', 'resi %s')\n" % code[2])
 Temp.write("cmd.color('green' , 'Surf')\n")
 Temp.write("cmd.color('magenta' , 'Bound')\n")
 Temp.write("cmd.color('red' , 'Core')\n")
-Temp.write("cmd.show_as('cartoon' , 's')\n")
+Temp.write("cmd.show_as('cartoon')\n")
 
 Temp.close()
 

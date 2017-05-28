@@ -94,14 +94,16 @@ Temp = open('temp.py' , 'w')
 Temp.write('import pymol\npymol.finish_launching()\n')
 Temp.write("cmd.load('%s')\n" % sys.argv[1])
 
-Temp.write("cmd.select('Surf', 'resi %s')\n" % code[0])
-Temp.write("cmd.select('Bound', 'resi %s')\n" % code[1])
-Temp.write("cmd.select('Core', 'resi %s')\n" % code[2])
+Temp.write("cmd.select('Surf' , 'resi %s')\n" % code[0])
+Temp.write("cmd.select('Bound' , 'resi %s')\n" % code[1])
+Temp.write("cmd.select('Core' , 'resi %s')\n" % code[2])
 
 Temp.write("cmd.color('green' , 'Surf')\n")
 Temp.write("cmd.color('magenta' , 'Bound')\n")
 Temp.write("cmd.color('red' , 'Core')\n")
 Temp.write("cmd.show_as('cartoon')\n")
+
+temp.write("cmd.set('cavity_cull' , 0)\n")
 
 Temp.close()
 

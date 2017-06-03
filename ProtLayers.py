@@ -103,7 +103,7 @@ Temp.write("cmd.color('magenta' , 'Bound')\n")
 Temp.write("cmd.color('red' , 'Core')\n")
 Temp.write("cmd.show_as('cartoon')\n")
 
-temp.write("cmd.set('cavity_cull' , 0)\n")
+Temp.write("cmd.set('cavity_cull' , 0)\n")
 
 Temp.close()
 

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import re , itertools , numpy , sys , Bio.PDB , os
+import re , numpy , sys , Bio.PDB , os
 
 def ProtLayers(Filename):
 	'''Takes A .pdb protein structure file and returns a PyMol code that highlights the different layers (Surface, Boundery, Core) of a protein'''

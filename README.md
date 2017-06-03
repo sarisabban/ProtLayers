@@ -24,7 +24,7 @@ Contact the author at sari.sabban@gmail.com for any questions regarding this scr
 To use follow these steps:
 
 1. Install DSSP in linux by running the following command in terminal (sudo apt-get install dssp).
-2. Install Pymol by running the following command in terminal (sudo apt-get install dssp).
+2. Install PyMOL by running the following command in terminal (sudo apt-get install pymol).
 3. Install biopython by running the following command in terminal (python3 -m pip install biopython) you need pip to be installed, if you do not have it you can install it in linux by running the following command in terminal (sudo apt-get install python3-pip).
 4. Install numpy (python3 -m pip install numpy).
 5. The .pdb file must be in the same directory as this script.

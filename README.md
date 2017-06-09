@@ -30,7 +30,7 @@ To use follow these steps:
 5. The .pdb file must be in the same directory as this script.
 6. Run by navigating to working directory then typing this in the command line:
 `python3 ProtLayers.py FINENAME.pdb`
-
+7. If you want to apply the code to multiple structures use the ProtLayers_code.py script which will print on the terminal the Pymol code, after which you can copy/paste into the Pymol terminal. That way the layers for multiple structures will be highlighted.
 
 
 ## REFERENCES:

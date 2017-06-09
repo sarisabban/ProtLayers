@@ -33,6 +33,7 @@ To use follow these steps:
 7. If you want to apply the code to multiple structures use the ProtLayers_code.py script which will print on the terminal the Pymol code, after which you can copy/paste into the Pymol terminal. That way the layers for multiple structures will be highlighted.
 
 
+
 ## REFERENCES:
 1. Refere to the paper by (Koga et.al., 2012 - [PMID: 23135467](https://www.ncbi.nlm.nih.gov/pubmed/23135467)) Methods section's Sequence Design Protocol for more explanation on protein refinement and each layer's SASA parameters.
 2. Refere to the paper by (Correia et.al., 2014 - [PMID: 24499818](https://www.ncbi.nlm.nih.gov/pubmed/24499818)) for details about the Rosetta Fold From Loop (FFL) protocol.

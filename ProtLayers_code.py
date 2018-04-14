@@ -53,7 +53,7 @@ for x in dssp:							#Loop to isolate SASA for each amino acid
 #Sheet =	B or E
 
 core = list()
-boundery = list()
+boundary = list()
 surface = list()
 count = 0
 for x , y in lis:
@@ -62,26 +62,26 @@ for x , y in lis:
 	if y <= 25 and (x == '-' or x == 'T' or x == 'S'):		#Loop
 		core.append(count)
 	elif 25 < y < 40 and (x == '-' or x == 'T' or x == 'S'):	#Loop
-		boundery.append(count)
+		boundary.append(count)
 	elif y >= 40 and (x == '-' or x == 'T' or x == 'S'):		#Loop
 		surface.append(count)
 
 	elif y <= 15 and (x == 'G' or x == 'H' or x == 'I'):		#Helix
 		core.append(count)
 	elif 15 < y < 60 and (x == 'G' or x == 'H' or x == 'I'):	#Helix
-		boundery.append(count)
+		boundary.append(count)
 	elif y >= 60 and (x == 'G' or x == 'H' or x == 'I'):		#Helix
 		surface.append(count)
 
 	elif y <= 15 and (x == 'B' or x == 'E'):			#Sheet
 		core.append(count)
 	elif 15 < y < 60 and (x == 'B' or x == 'E'):			#Sheet
-		boundery.append(count)
+		boundary.append(count)
 	elif y >= 60 and (x == 'B' or x == 'E'):			#Sheet
 		surface.append(count)
 
 Surf = '+'.join(str(z) for z in surface)
-Bound = '+'.join(str(z) for z in boundery)
+Bound = '+'.join(str(z) for z in boundary)
 Core = '+'.join(str(z) for z in core)
 
 #Print the custom PYMOL commands to select the different protein layers according to each amino acid's SASA.
